@@ -18,7 +18,7 @@ public class LostActivity extends  AppCompatActivity {
         String name= intent.getStringExtra("name");
         String country =intent.getStringExtra("country");
         textView=findViewById(R.id.findViewById);
-        textView.setText("Welcome back" + name + "name" );
+        textView.setText("Welcome back" + name);
     }
 }
 

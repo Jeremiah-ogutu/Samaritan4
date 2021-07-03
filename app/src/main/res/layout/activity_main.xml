@@ -23,6 +23,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
+        android:textSize="50sp"
+        android:textColor="@color/white"
         android:text="G-samaritan" />
 
 
@@ -36,7 +38,9 @@
         android:layout_marginEnd="97dp"
         android:layout_marginBottom="220dp"
         android:padding="5dp"
+        android:textSize="20sp"
         android:ems="10"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/editText"
         android:hint="enter your county" />
@@ -44,10 +48,12 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="234dp"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="97dp"
+        android:textColor="@color/white"
         android:layout_marginBottom="276dp"
         android:padding="5dp"
         android:ems="10"

@@ -32,7 +32,6 @@
 
 
     <EditText
-        android:id="@+id/edittext"
         android:layout_width="234dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -45,12 +44,11 @@
         android:ems="10"
         android:background="@color/purple_500"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/editText"
         android:textColor="@color/white"
         android:hint="enter your county" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/findViewById"
         android:layout_width="234dp"
         android:textSize="20sp"
         android:layout_height="wrap_content"
@@ -73,6 +71,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Log in"
+        android:onClick="switchActivity"
         android:background="@color/green"
         android:textColor="@color/white" />
 

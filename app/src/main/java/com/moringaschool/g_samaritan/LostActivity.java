@@ -10,16 +10,16 @@ import android.widget.TextView;
 public class LostActivity extends  AppCompatActivity {
     TextView textView;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_lost);
-//        Intent intent =getIntent();
-//        String name= intent.getStringExtra("name");
-//        String country =intent.getStringExtra("country");
-//        textView=findViewById(R.id.findViewById);
-//        textView.setText("Welcome back" + name + "name" );
-//    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lost);
+        Intent intent =getIntent();
+        String name= intent.getStringExtra("name");
+        String country =intent.getStringExtra("country");
+        textView=findViewById(R.id.findViewById);
+        textView.setText("Welcome back" + name + "name" );
+    }
 }
 
 //import android.content.Intent;

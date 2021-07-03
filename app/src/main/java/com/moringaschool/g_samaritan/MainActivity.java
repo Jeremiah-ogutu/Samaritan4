@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         county=findViewById(R.id.edittext);
     }
 //
-//    public void switchActivity(View view){
-//        Intent intent = new Intent(this.lostActivityclass)
-//        intent.putExtra("user",name.getText());
-//        intent.putExtra("country",county.getText());
-//        startActivity(intent);
-//    }
-//}
+    public void switchActivity(View view){
+        Intent intent = new Intent(this.lostActivityclass)
+        intent.putExtra("user",name.getText());
+        intent.putExtra("country",county.getText());
+        startActivity(intent);
+    }
+}

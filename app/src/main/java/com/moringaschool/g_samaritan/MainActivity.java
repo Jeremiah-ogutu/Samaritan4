@@ -11,13 +11,13 @@ public class MainActivity extends AppCompatActivity {
     EditText name;
     EditText county;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        name =findViewById(R.id.editText);
-//        county=findViewById(R.id.edittext);
-//    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        name =findViewById(R.id.editText);
+        county=findViewById(R.id.edittext);
+    }
 //
 //    public void switchActivity(View view){
 //        Intent intent = new Intent(this.lostActivityclass)

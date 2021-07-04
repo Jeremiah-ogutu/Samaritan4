@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,12 +13,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class LostActivity extends  AppCompatActivity {
     TextView textView;
+//    @BindView(R.id.textView) TextView textView;
     ListView listView;
+//    @BindView(R.id.listView) ListView listView;
 
     private String[] lost = new String[]{"John Baraza","Kivuki Tuka","Shutuka Kizee","Doe moen","Pirre Smart", "Dokore Daka","Ogutu Sultan","Mwana Wababu","Oushe Biggy","Jeshi Krotone" };
-    private Object LostActivity;
+//    private Object LostActivity;
 
 //    TextView textView;
 
@@ -25,7 +31,8 @@ public class LostActivity extends  AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost);
-        listView =(ListView) findViewById(R.id.listView);
+//        ButterKnife.bind(this);
+        listView =(ListView) findViewById(R.id.listview);
         textView =(TextView) findViewById(R.id.findViewById);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,lost);
@@ -35,7 +42,7 @@ public class LostActivity extends  AppCompatActivity {
 
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 String lost =((TextView)view).getText().toString();
 
                 Toast.makeText(LostActivity.this,lost,Toast.LENGTH_LONG).show();
@@ -45,8 +52,10 @@ public class LostActivity extends  AppCompatActivity {
         Intent intent =getIntent();
         String name= intent.getStringExtra("name");
         String county =intent.getStringExtra("county");
-        textView=findViewById(R.id.findViewById);
+//        textView=findViewById(R.id.findViewById);
         textView.setText("Welcome back good samaritan "  + name +  " Here is the list of the lost items in   "   + county +   " lets help find there owners" );
+        Log.d("LostActivity", "In the onCreate method!");
+
 //        textView.setText("");
     }
 }

@@ -29,6 +29,7 @@ public class LostActivity extends  AppCompatActivity {
 //    private Object LostActivity;
 
 //    TextView textView;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,15 @@ public class LostActivity extends  AppCompatActivity {
 //        ButterKnife.bind(this);
         listView =(ListView) findViewById(R.id.listview);
         textView =(TextView) findViewById(R.id.findViewById);
+
+        button = findViewById(R.id.foundItembutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                foundItembutton();
+            }
+        });
+
 
 //        LostArrayAdapter adapter = new LostArrayAdapter(this, android.R.layout.simple_list_item_1,lost mCuisines);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lost); //
@@ -52,7 +62,9 @@ public class LostActivity extends  AppCompatActivity {
                 Toast.makeText(LostActivity.this,lost,Toast.LENGTH_LONG).show();
             }
         });
-        
+
+
+
         Intent intent =getIntent();
         String name= intent.getStringExtra("name");
         String county =intent.getStringExtra("county");
@@ -60,7 +72,19 @@ public class LostActivity extends  AppCompatActivity {
         textView.setText("Welcome back good samaritan "  + name +  " Here is the list of the lost items in   "   + county +   " lets help find there owners" );
         Log.d("LostActivity", "In the onCreate method!");
 
+
+
 //        textView.setText("");
+
+//        public void switchActivity(View view   ){
+//            Intent intent = new Intent(this,FoundActivity.class);
+//            startActivity(intent);
+//        }
+    }
+
+    private void foundItembutton() {
+        Intent intent = new Intent(this,FoundActivity.class);
+        startActivity(intent);
     }
 }
 

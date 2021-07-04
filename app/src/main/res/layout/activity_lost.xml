@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#FF03DAC5"
+    android:textColor="@color/white"
+
     tools:context=".LostActivity">
 
   <TextView
@@ -12,9 +14,9 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textSize="20sp"
-      android:textColor="@color/white"
       android:layout_centerVertical="true"
       android:layout_alignParentTop="true"
+      android:textColor="@color/white"
       android:layout_centerHorizontal="true"
       android:text="TextView" />
 
@@ -24,13 +26,24 @@
       android:layout_below="@+id/findViewById"
       android:layout_alignParentRight="true"
       android:layout_alignParentEnd="true"
-      android:textColor="@color/white"
 
       android:layout_height="wrap_content" />
   <ListView
       android:layout_width="match_parent"
       android:layout_below="@+id/findViewById"
       android:textColor="@color/white"
+
+
       android:id="@+id/listview"
       android:layout_height="wrap_content" />
+
+  <Button
+      android:id="@+id/foundItembutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:text="Check FoundItems"
+      android:textColor="@color/white" />
+
 </RelativeLayout>

@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gsamaritan" >
+        <activity android:name=".FoundActivity" >
+        </activity>
         <activity android:name=".LostActivity" >
         </activity>
         <activity android:name=".MainActivity" >

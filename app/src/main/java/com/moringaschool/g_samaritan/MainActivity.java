@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         name =findViewById(R.id.findViewById);
-        county=findViewById(R.id.findViewById);
+        county=findViewById(R.id.EditText);
     }
 //
     public void switchActivity(View view){
         Intent intent = new Intent(this,LostActivity.class);
         intent.putExtra("name",name.getText() .toString()) ;
-        intent.putExtra("country",county.getText() .toString());
+        intent.putExtra("county",county.getText() .toString());
         startActivity(intent);
     }
 }

@@ -42,6 +42,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:ems="10"
+        android:id="@+id/EditText"
         android:background="@color/purple_500"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"

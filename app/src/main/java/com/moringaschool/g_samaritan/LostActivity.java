@@ -23,6 +23,9 @@ public class LostActivity extends  AppCompatActivity {
 //    @BindView(R.id.listView) ListView listView;
 
     private String[] lost = new String[]{"John Baraza","Kivuki Tuka","Shutuka Kizee","Doe moen","Pirre Smart", "Dokore Daka","Ogutu Sultan","Mwana Wababu","Oushe Biggy","Jeshi Krotone" };
+    private String[] cuisines  =new String[] {
+            "B.M.X bicycle","TecknoSpark7", "KDF675N Subaru","ID No.456372","Ranger KMFE354y","Child name: Kitelo","HUduma card 1034567","Guchi laptopbag","Puma shoe","K.C.S.E certificate"
+    };
 //    private Object LostActivity;
 
 //    TextView textView;
@@ -35,7 +38,8 @@ public class LostActivity extends  AppCompatActivity {
         listView =(ListView) findViewById(R.id.listview);
         textView =(TextView) findViewById(R.id.findViewById);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,lost);
+//        LostArrayAdapter adapter = new LostArrayAdapter(this, android.R.layout.simple_list_item_1,lost mCuisines);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lost); //
         listView.setAdapter(adapter);
 
         listView .setOnItemClickListener(new AdapterView.OnItemClickListener() {

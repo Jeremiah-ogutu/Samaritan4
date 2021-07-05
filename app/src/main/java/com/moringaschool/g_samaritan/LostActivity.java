@@ -69,7 +69,7 @@ public class LostActivity extends  AppCompatActivity {
         String name= intent.getStringExtra("name");
         String county =intent.getStringExtra("county");
 //        textView=findViewById(R.id.findViewById);
-        textView.setText("Welcome back good samaritan "  + name +  " Here is the list of the lost items in   "   + county +   " lets help find there owners" );
+        textView.setText("Welcome back good samaritan "  + name +  " here is the list of the lost items in   "   + county +   " lets help find there owners" );
         Log.d("LostActivity", "In the onCreate method!");
 
 

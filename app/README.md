@@ -10,12 +10,12 @@ This is an application of goodsamaritan family that helps one to find his /her l
 
 ### Setup
 
-<!-- To create the necessary databases, launch postgres, then psql, and run the following commands: -->
+To create the necessary databases, launch postgres, then psql, and run the following commands:
 
 
-<!-- ## Technologies used -->
-<!-- - Java -->
-<!-- - Android -->
+## Technologies used
+- Java
+- Android
 
 
 <!-- ## Bugs being worked on -->

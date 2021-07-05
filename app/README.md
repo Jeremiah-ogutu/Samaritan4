@@ -1,6 +1,6 @@
 ## G-samaritan
 
-###Author
+### Author
 Jeremiah Juma
 
 
@@ -10,7 +10,7 @@ This is an application of goodsamaritan family that helps one to find his /her l
 
 ### Setup
 
-To create the necessary databases, launch postgres, then psql, and run the following commands:
+You can clone the application using **https://github.com/Jeremiah-ogutu/AndroidApplication.git**
 
 
 ## Technologies used

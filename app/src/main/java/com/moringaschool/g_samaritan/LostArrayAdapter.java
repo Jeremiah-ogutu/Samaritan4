@@ -20,7 +20,7 @@ public class LostArrayAdapter extends ArrayAdapter {
     public Object getItem(int position){
         String lost = mLost[position];
         String cuisine =mCuisines[position];
-        return String.format("%\nServes great: %S",lost,cuisine);
+        return String.format("%S \nServes great: %S",lost,cuisine);
     }
     @Override
     public int getCount(){

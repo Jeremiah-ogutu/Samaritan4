@@ -31,11 +31,5 @@
       android:layout_below="@+id/TextView"
       android:layout_alignParentEnd="true" />
 
-<!--  <ListView-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:layout_below="@+id/findViewById"-->
-<!--      android:textColor="@color/white"-->
-
-
 
 </RelativeLayout>

@@ -74,12 +74,7 @@ public class LostActivity extends  AppCompatActivity {
 
 
 
-//        textView.setText("");
-
-//        public void switchActivity(View view   ){
-//            Intent intent = new Intent(this,FoundActivity.class);
-//            startActivity(intent);
-//        }
+//     
     }
 
     private void foundItembutton() {
@@ -88,21 +83,3 @@ public class LostActivity extends  AppCompatActivity {
     }
 }
 
-//import android.content.Intent;
-//import android.os.Bundle;
-//import android.widget.TextView;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//class RestaurantsActivity extends AppCompatActivity {
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_lost);
-//        TextView mEdittext = (TextView) findViewById(R.id.edittext);
-//        Intent intent = getIntent();
-//        String name = intent.getStringExtra("name");
-//
-//        mEdittext.setText("Welcome back:" + name);
-//    }
-//}

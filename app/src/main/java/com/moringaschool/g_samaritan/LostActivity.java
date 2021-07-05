@@ -48,8 +48,8 @@ public class LostActivity extends  AppCompatActivity {
         });
 
 
-//        LostArrayAdapter adapter = new LostArrayAdapter(this, android.R.layout.simple_list_item_1,lost mCuisines);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lost); //
+        LostArrayAdapter adapter = new LostArrayAdapter(this, android.R.layout.simple_list_item_1,lost, cuisines);
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lost); //
         listView.setAdapter(adapter);
 
         listView .setOnItemClickListener(new AdapterView.OnItemClickListener() {

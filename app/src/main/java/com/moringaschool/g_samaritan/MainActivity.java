@@ -19,18 +19,18 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    EditText name;
-//    @BindView(R.id.findViewById) EditText name ;
-    EditText county;
-//    @BindView(R.id.EditText) EditText county;
+//    EditText name;
+    @BindView(R.id.findViewById) EditText name ;
+//    EditText county;
+    @BindView(R.id.EditText) EditText county;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ButterKnife.bind(this);
-        name =findViewById(R.id.findViewById);
-        county=findViewById(R.id.EditText);
+        ButterKnife.bind(this);
+//        name =findViewById(R.id.findViewById);
+//        county=findViewById(R.id.EditText);
     }
 //
     public void switchActivity(View view){

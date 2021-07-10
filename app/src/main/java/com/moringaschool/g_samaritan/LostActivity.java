@@ -81,5 +81,8 @@ public class LostActivity extends  AppCompatActivity {
         Intent intent = new Intent(this,FoundActivity.class);
         startActivity(intent);
     }
+
+
+
 }
 

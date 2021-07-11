@@ -7,36 +7,36 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:id="@+id/restaurantImageView"
-        android:src="waffles"
+        android:id="@+id/lostImageView"
+        android:src="@drawable/waffles"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="281dp"
         android:background="#ffffff"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lostImageView"
+        android:layout_toEndOf="@+id/lostImageView"
         android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/restaurantNameTextView"
-            android:textSize="20dp"
+            android:id="@+id/nameTextView"
+            android:textSize="10dp"
             android:textStyle="bold"
-            android:text="Restaurant Name"
+            android:text="Name"
             android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="One Cuisine Type"
-            android:id="@+id/categoryTextView"
-            android:textStyle="italic"/>
+            android:text="country"
+            android:id="@+id/countryTextView"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,7 +46,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/black"/>
-        </RelativeLayout>
 
     </LinearLayout>
 

@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class GsamaritanResponse {
 
+    public List<com.moringaschool.samaritan2.GsamaritanResponse> GsamaritanResponse;
     @SerializedName("domains")
     @Expose
     private List<String> domains = null;

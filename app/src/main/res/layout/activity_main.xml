@@ -80,3 +80,51 @@
 
 
 </RelativeLayout>
+<!--    tools:context=".MainActivity">-->
+
+<!--&lt;!&ndash;    <ListView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/listView"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_below="@id/locationTextView"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:visibility="gone" />&ndash;&gt;-->
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:text="recyclerview text"-->
+<!--        android:id="@+id/samaritanRecyclerView"-->
+<!--        android:visibility="gone"/>-->
+
+
+<!--    &lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/locationTextView"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Restaurants near "&ndash;&gt;-->
+<!--&lt;!&ndash;        android:visibility="gone" />&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ErrorTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="mic check"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:visibility="gone" />-->
+
+
+<!--</RelativeLayout>-->
+

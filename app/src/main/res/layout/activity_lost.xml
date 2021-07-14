@@ -33,7 +33,6 @@
       android:layout_below="@+id/findViewById"
       android:textColor="@color/white"
 
-
       android:id="@+id/listview"
       android:layout_height="wrap_content" />
 

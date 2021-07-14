@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moringaschool.g_samaritan.R;
+
 import java.util.List;
 
 import butterknife.BindView;
@@ -45,7 +47,7 @@ public class stateProvinceAdapter  extends RecyclerView.Adapter<stateProvinceAda
     }
 
     public  class stateProvinceViewHolder extends RecyclerView.ViewHolder{
-        @BindView(R.id.lostImageView) ImageView mlostImageview;
+        @BindView(R.id.lostImageView) ImageView lostImageView;
         @BindView(R.id.nameTextView) TextView mnameTextView;
         @BindView(R.id.countryTextView)TextView mCountyTextView;
         @BindView(R.id.setAlphaTwoCode) TextView msetAlphaTwoCode;

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.moringaschool.g-samaritan"
+        applicationId "com.moringaschool.g_samaritan"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

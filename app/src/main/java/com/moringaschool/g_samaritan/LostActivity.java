@@ -61,16 +61,26 @@ public class LostActivity extends  AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost);
 //        ButterKnife.bind(this);
+        recyclerView = findViewById(R.id.postRecyclerView);
+        progressBar = findViewById(R.id.progressBar);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new UniversitiesAdapter(universitiesList);
+        recyclerView.setAdapter(adapter);
         listView =(ListView) findViewById(R.id.listview);
         textView =(TextView) findViewById(R.id.findViewById);
 
         button = findViewById(R.id.foundItembutton);
+        fetchPosts();
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 foundItembutton();
             }
         });
+
 
 
 //        LostArrayAdapter adapter = new LostArrayAdapter(this, android.R.layout.simple_list_item_1,lost, cuisines);
@@ -99,59 +109,34 @@ public class LostActivity extends  AppCompatActivity {
 
         //IP2
 
-        UniApi myClient = UniversityClient.getClient();
-        Call<GsamaritanResponse> call = myClient.getLostItems(Constants.G_SAMARITAN_BASE_URL);
 
-        call.enqueue(new Callback<GsamaritanResponse>() {
+
+    }
+
+    private void fetchPosts(){
+        progressBar.setVisibility(View.VISIBLE);
+        UniversityClient.getClient().getUniversities().enqueue(new Callback<Universities>() {
             @Override
-            public void onResponse(Call<GsamaritanResponse> call, Response<GsamaritanResponse> response) {
-                hideProgressBar();
-                if(response.isSuccessful()){
-                    msamaritan = response.body().getGsamaritanResponse;
-                    mAdapter= new UniversityAdapterAdapter(LostActivity.this,msamaritan);
-                    msamaritanRecyclerView.setAdapter(mAdapter);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(LostActivity.this);
-                    msamaritanRecyclerView.setLayoutManager(layoutManager);
-                    msamaritanRecyclerView.setHasFixedSize(true);
-
-                    showGsamaritanResponse();
-
+            public void onResponse(Call<Universities> call, Response<Universities> response) {
+                if(response.isSuccessful() && response.body() !=null){
+                    universitiesList.addAll(response.body());
+                    adapter.notifyDataSetChanged();
+                    progressBar.setVisibility(View.GONE);
 
                 }
-                else {
-                    showFaliureMessage();
-                }
+
             }
 
             @Override
-            public void onFailure(Call<GsamaritanResponse> call, Throwable t) {
-
-                hideProgressBar();
-                showFaliureMessage();
-
+            public void onFailure(Call<Universities> call, Throwable t) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(LostActivity.this,"Error "+ t.getMessage(),Toast.LENGTH_SHORT).show();
             }
+
+
         });
 
-
     }
-
-    public void hideProgressBar(){
-        mProgressBar.setVisibility(View.GONE);
-
-    }
-    public void showGsamaritanResponse(){
-        msamaritanRecyclerView.setVisibility(View.VISIBLE);
-
-    }
-    public void showFaliureMessage(){
-        mErrorTextView.setText("Check your internate connection");
-        mErrorTextView.setVisibility(View.VISIBLE);
-    }
-
-
-
-
-
 
 
     private void foundItembutton() {

@@ -15,13 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import retrofit2.Call;
 
+import com.moringaschool.g_samaritan.models.Universities;
 import com.moringaschool.g_samaritan.network.UniApi;
 import com.moringaschool.samaritan2.Constants;
 import com.moringaschool.samaritan2.GsamaritanResponse;
 import com.moringaschool.samaritan2.SamaritanApi;
 import com.moringaschool.g_samaritan.network.UniversityClient;
-import com.moringaschool.samaritan2.stateProvinceAdapter;
+import com.moringaschool.g_samaritan.adapter.UniversityAdapterAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -33,14 +35,14 @@ public class LostActivity extends  AppCompatActivity {
     TextView textView;
 //    @BindView(R.id.textView) TextView textView;
     ListView listView;
-    @BindView(R.id.progressBar)
-    ProgressBar mProgressBar;
-    @BindView(R.id.ErrorTextView) TextView mErrorTextView;
+    RecyclerView recyclerView;
+    ProgressBar progressBar;
+    LinearLayoutManager layoutManager;
+    UniversitiesAdapter adapter;
 
-    @BindView(R.id.samaritanRecyclerView)
-    RecyclerView msamaritanRecyclerView;
+    List<Universities> universitiesList = new ArrayList<>();
 
-    private stateProvinceAdapter mAdapter;
+    private UniversityAdapterAdapter mAdapter;
     private List<GsamaritanResponse> msamaritan;
 
 //    @BindView(R.id.listView) ListView listView;
@@ -106,7 +108,7 @@ public class LostActivity extends  AppCompatActivity {
                 hideProgressBar();
                 if(response.isSuccessful()){
                     msamaritan = response.body().getGsamaritanResponse;
-                    mAdapter= new stateProvinceAdapter(LostActivity.this,msamaritan);
+                    mAdapter= new UniversityAdapterAdapter(LostActivity.this,msamaritan);
                     msamaritanRecyclerView.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(LostActivity.this);
                     msamaritanRecyclerView.setLayoutManager(layoutManager);

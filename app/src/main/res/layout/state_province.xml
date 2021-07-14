@@ -4,50 +4,49 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="100dp"
-        android:id="@+id/lostImageView"
-        android:src="@drawable/waffles"
-        android:scaleType="centerCrop"/>
+<!--    <ImageView-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:id="@+id/lostImageView"-->
+<!--        android:src="@drawable/waffles"-->
+<!--        android:scaleType="centerCrop"/>-->
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="281dp"
-        android:background="#ffffff"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/lostImageView"
-        android:layout_toEndOf="@+id/lostImageView"
-        android:padding="10dp">
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="281dp"-->
+<!--        android:background="#ffffff"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toRightOf="@+id/lostImageView"-->
+<!--        android:layout_toEndOf="@+id/lostImageView"-->
+<!--        android:padding="10dp">-->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nameTextView"
+            android:id="@+id/textViewBody"
             android:textSize="10dp"
             android:textStyle="bold"
-            android:text="Name"
+            android:text="Body txt"
             android:textColor="@color/black"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="country"
-            android:id="@+id/countryTextView"
-            android:textStyle="italic"
-            android:textColor="@color/black"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="country"-->
+<!--            android:id="@+id/countryTextView"-->
+<!--            android:textStyle="italic"-->
+<!--            android:textColor="@color/black"/>-->
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AlphaTwoCode"
-                android:id="@+id/setAlphaTwoCode"
+                android:text="Title"
+                android:id="@+id/textViewTitle"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/black"/>
 
-    </LinearLayout>
 
 
 </RelativeLayout>

@@ -1,5 +1,5 @@
 
-package  com.moringaschool.g_samaritan; ;
+package com.moringaschool.g_samaritan.models; ;
 
 import java.util.List;
 

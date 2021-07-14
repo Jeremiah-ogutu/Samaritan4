@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-//        name =findViewById(R.id.findViewById);
-//        county=findViewById(R.id.EditText);
+
+//
     }
 //
     public void switchActivity(View view){
@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("county",county.getText() .toString());
         startActivity(intent);
     }
+
+
 }
 
 

@@ -1,13 +1,13 @@
 
-package  com.moringaschool.samaritan2; ;
+package  com.moringaschool.g_samaritan; ;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GsamaritanResponse {
+public class Universities {
 
-    public List<com.moringaschool.samaritan2.GsamaritanResponse> GsamaritanResponse;
     @SerializedName("domains")
     @Expose
     private List<String> domains = null;
@@ -29,13 +29,13 @@ public class GsamaritanResponse {
 
     /**
      * No args constructor for use in serialization
-     *
+     * 
      */
-    public GsamaritanResponse() {
+    public Universities() {
     }
 
     /**
-     *
+     * 
      * @param webPages
      * @param country
      * @param name
@@ -43,7 +43,7 @@ public class GsamaritanResponse {
      * @param stateProvince
      * @param alphaTwoCode
      */
-    public GsamaritanResponse(List<String> domains, List<String> webPages, String name, String alphaTwoCode, Object stateProvince, String country) {
+    public Universities(List<String> domains, List<String> webPages, String name, String alphaTwoCode, Object stateProvince, String country) {
         super();
         this.domains = domains;
         this.webPages = webPages;

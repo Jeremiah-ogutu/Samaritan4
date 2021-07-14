@@ -1,20 +1,15 @@
-package com.moringaschool.samaritan2;
+package com.moringaschool.g_samaritan.network;
 
-import com.moringaschool.samaritan2.Constants;
+import com.moringaschool.g_samaritan.Constants;
 
-import java.io.IOException;
-
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class SamaritanClient {
+public class UniversityClient {
 
     private static Retrofit retrofit = null;
 
-    public static SamaritanApi getClient() {
+    public static UniApi getClient() {
 
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()//reate new retrofit instance
@@ -23,7 +18,7 @@ public class SamaritanClient {
                     .addConverterFactory(GsonConverterFactory.create())// converter
                     .build();
         }
-        return  retrofit.create(SamaritanApi.class);
+        return  retrofit.create(UniApi.class);
 
     }
 }

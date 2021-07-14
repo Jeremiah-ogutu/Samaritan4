@@ -19,11 +19,12 @@ import butterknife.ButterKnife;
 
 
 public class stateProvinceAdapter  extends RecyclerView.Adapter<stateProvinceAdapter.stateProvinceViewHolder> {
+//
     private List<GsamaritanResponse> mSamaritan;
-    private Context mContext;
+//    private Context mContext;
 
-    public stateProvinceAdapter(Context context,List<GsamaritanResponse>msamaritan){
-        mContext = context;
+    public stateProvinceAdapter(Context context, List<GsamaritanResponse> msamaritan){
+//        mContext = context;
         mSamaritan = msamaritan;
     }
 
@@ -37,7 +38,7 @@ public class stateProvinceAdapter  extends RecyclerView.Adapter<stateProvinceAda
 
     @Override
     public void onBindViewHolder( stateProvinceAdapter.stateProvinceViewHolder holder, int position) {
-        holder.bindstateProvince(mSamaritan.get(position));
+        holder.bindstateProvinceAdapter(mSamaritan.get(position));
 
     }
 
@@ -60,7 +61,7 @@ public class stateProvinceAdapter  extends RecyclerView.Adapter<stateProvinceAda
             mContext = itemView.getContext();
         }
 
-        public void  bindstateProvince(GsamaritanResponse stateProvince){
+        public void  bindstateProvinceAdapter(GsamaritanResponse stateProvince){
             mnameTextView.setText(stateProvince.getName());
             mCountyTextView.setText(stateProvince.getCountry());
             msetAlphaTwoCode.setText(stateProvince.getAlphaTwoCode());

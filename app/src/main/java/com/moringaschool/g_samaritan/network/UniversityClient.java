@@ -9,11 +9,11 @@ public class UniversityClient {
 
     private static Retrofit retrofit = null;
 
-    public static UniApi getClient() {
+    public static UniApi getRetrofitClient() {
 
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()//reate new retrofit instance
-                    .baseUrl(Constants.G_SAMARITAN_BASE_URL)// Api base url
+                    .baseUrl(Constants.BASE_URL)// Api base url
 //                  .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())// converter
                     .build();

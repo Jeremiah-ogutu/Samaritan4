@@ -27,6 +27,7 @@
             android:textSize="10dp"
             android:textStyle="bold"
             android:text="Body txt"
+
             android:textColor="@color/black"/>
 
 <!--        <TextView-->

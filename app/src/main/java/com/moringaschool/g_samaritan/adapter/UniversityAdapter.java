@@ -30,8 +30,9 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Po
 
     @Override
     public PostViewHolder onCreateViewHolder(  ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent .getContext()).inflate(R.layout.state_province,parent,false);
-        PostViewHolder ViewHolder = new PostViewHolder(view);
+        View view = LayoutInflater.from(parent .getContext())
+                .inflate(R.layout.state_province,parent,false);
+//        PostViewHolder ViewHolder = new PostViewHolder(view);
         return new PostViewHolder(view);
     }
 
@@ -53,19 +54,15 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Po
         @BindView(R.id.textViewTitle)TextView textViewTitle;
 //        @BindView(R.id.setAlphaTwoCode) TextView msetAlphaTwoCode;
 
-        private Context mContext;
+//        private Context mContext;
 
         public PostViewHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this,itemView);
-            mContext = itemView.getContext();
+//            mContext = itemView.getContext();
         }
 //
-//        public void  bindstateProvinceAdapter(GsamaritanResponse stateProvince){
-//            mnameTextView.setText(stateProvince.getName());
-//            mCountyTextView.setText(stateProvince.getCountry());
-//            msetAlphaTwoCode.setText(stateProvince.getAlphaTwoCode());
-//        }
+//
 
 
     }

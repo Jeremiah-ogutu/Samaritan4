@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF03DAC5"
     android:textColor="@color/white"
 
     tools:context=".LostActivity">
 
-  <TextView
-      android:id="@+id/findViewById"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="20sp"
-      android:layout_centerVertical="true"
-      android:layout_alignParentTop="true"
-      android:textColor="@color/white"
-      android:layout_centerHorizontal="true"
-      android:text="TextView" />
 
+
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/postRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
   <ProgressBar
       android:visibility="gone"
@@ -34,40 +35,7 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@+id/postRecyclerView" />
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/postRecyclerView"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
 
-
-<!--  <ListView-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:id="@+id/listView"-->
-<!--      android:layout_below="@+id/findViewById"-->
-<!--      android:layout_alignParentRight="true"-->
-<!--      android:layout_alignParentEnd="true"-->
-
-<!--      android:layout_height="wrap_content" />-->
-<!--  <ListView-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:layout_below="@+id/findViewById"-->
-<!--      android:textColor="@color/white"-->
-
-<!--      android:id="@+id/listview"-->
-<!--      android:layout_height="wrap_content" />-->
-
-<!--  <androidx.recyclerview.widget.RecyclerView-->
-<!--      android:layout_width="match_parent"-->
-<!--      android:layout_height="wrap_content"-->
-<!--      android:layout_alignParentRight="true"-->
-<!--      android:layout_alignParentEnd="true"-->
-<!--      android:text="recyclerview text"-->
-<!--      android:id="@+id/samaritanRecyclerView"-->
-<!--      android:visibility="gone"/>-->
 
 
   <Button

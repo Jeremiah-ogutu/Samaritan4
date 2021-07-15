@@ -12,7 +12,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Gsamaritan" >
+        android:theme="@style/Theme.Gsamaritan"
+        android:usesCleartextTraffic="true">
         <activity android:name=".FoundActivity"
             android:parentActivityName=".LostActivity">
         </activity>

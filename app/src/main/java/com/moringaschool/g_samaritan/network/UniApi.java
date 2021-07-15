@@ -7,7 +7,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface UniApi {
-    @GET("search?name")
+    @GET("/search")
     Call<Universities> getUniversities(
     );
 }

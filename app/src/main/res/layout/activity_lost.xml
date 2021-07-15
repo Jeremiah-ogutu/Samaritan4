@@ -22,11 +22,27 @@
 
 
   <ProgressBar
+      android:visibility="gone"
       android:id="@+id/progressBar"
-      style="?android:attr/progressBarStyle"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_centerInParent="true" />
+      app:layout_constraintBottom_toBottomOf="@+id/postRecyclerView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/postRecyclerView"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/postRecyclerView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/postRecyclerView" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/postRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
 
 <!--  <ListView-->
 <!--      android:layout_width="match_parent"-->
@@ -44,14 +60,14 @@
 <!--      android:id="@+id/listview"-->
 <!--      android:layout_height="wrap_content" />-->
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentEnd="true"
-      android:text="recyclerview text"
-      android:id="@+id/samaritanRecyclerView"
-      android:visibility="gone"/>
+<!--  <androidx.recyclerview.widget.RecyclerView-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_alignParentRight="true"-->
+<!--      android:layout_alignParentEnd="true"-->
+<!--      android:text="recyclerview text"-->
+<!--      android:id="@+id/samaritanRecyclerView"-->
+<!--      android:visibility="gone"/>-->
 
 
   <Button

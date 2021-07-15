@@ -17,14 +17,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class UniversityAdapterAdapter extends RecyclerView.Adapter<UniversityAdapterAdapter.PostViewHolder> {
+public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.PostViewHolder> {
 //
     private List<Universities> universitiesList;
 //    private Context mContext;
 
-    public UniversityAdapterAdapter(Context context, List<Universities> universitiesList){
+    public UniversityAdapter(List<Universities> universitiesList){
 //        mContext = context;
-        universitiesList = universitiesList;
+        this.universitiesList = universitiesList;
     }
 
 
@@ -36,7 +36,7 @@ public class UniversityAdapterAdapter extends RecyclerView.Adapter<UniversityAda
     }
 
     @Override
-    public void onBindViewHolder(UniversityAdapterAdapter.PostViewHolder holder, int position) {
+    public void onBindViewHolder(UniversityAdapter.PostViewHolder holder, int position) {
         holder.textViewBody.setText("University Name : " + universitiesList.get(position).getName());
         holder.textViewTitle.setText("Country : " + universitiesList.get(position).getCountry());
 

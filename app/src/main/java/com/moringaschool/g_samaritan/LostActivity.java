@@ -82,9 +82,9 @@ public class LostActivity extends  AppCompatActivity {
 
     private void fetchPosts(){
         progressBar.setVisibility(View.VISIBLE);
-        UniversityClient.getRetrofitClient().getUniversities().enqueue(new Callback<Universities>() {
+        UniversityClient.getRetrofitClient().getUniversities().enqueue(new Callback<List<Universities>>() {
             @Override
-            public void onResponse(Call<Universities> call, Response<Universities> response) {
+            public void onResponse(Call<List<Universities>> call, Response<List<Universities>> response) {
 
                 if(response.isSuccessful() && response.body() !=null){
                     universitiesList.addAll((Collection<? extends Universities>) response.body());
@@ -96,7 +96,7 @@ public class LostActivity extends  AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Universities> call, Throwable t) {
+            public void onFailure(Call<List<Universities>> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
                 Toast.makeText(LostActivity.this,"Error "+ t.getMessage(),Toast.LENGTH_SHORT).show();
 

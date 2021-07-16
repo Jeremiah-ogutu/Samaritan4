@@ -19,9 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-//    EditText name;
     @BindView(R.id.findViewById) EditText name ;
-//    EditText county;
     @BindView(R.id.EditText) EditText county;
 
     @Override

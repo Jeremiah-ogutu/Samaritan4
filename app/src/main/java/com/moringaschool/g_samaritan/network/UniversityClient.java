@@ -14,7 +14,6 @@ public class UniversityClient {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()//reate new retrofit instance
                     .baseUrl(Constants.BASE_URL)// Api base url
-//                  .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())// converter
                     .build();
         }

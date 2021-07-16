@@ -1,6 +1,5 @@
 package com.moringaschool.g_samaritan.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +30,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Po
     @Override
     public PostViewHolder onCreateViewHolder(  ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent .getContext())
-                .inflate(R.layout.state_province,parent,false);
+                .inflate(R.layout.list_item,parent,false);
 //        PostViewHolder ViewHolder = new PostViewHolder(view);
         return new PostViewHolder(view);
     }
@@ -49,19 +48,19 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Po
     }
 
     public  class PostViewHolder extends RecyclerView.ViewHolder{
-//        @BindView(R.id.lostImageView) ImageView lostImageView;
+
+
         @BindView(R.id.textViewBody) TextView textViewBody;
         @BindView(R.id.textViewTitle)TextView textViewTitle;
 
-//        private Context mContext;
 
         public PostViewHolder(View itemView){
             super(itemView);
+
             ButterKnife.bind(this,itemView);
-//            mContext = itemView.getContext();
+
         }
-//
-//
+
 
 
     }

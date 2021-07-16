@@ -52,7 +52,6 @@ public class LostActivity extends  AppCompatActivity {
         adapter = new UniversityAdapter(universitiesList);
         recyclerView.setAdapter(adapter);
 
-
         button = findViewById(R.id.foundItembutton);
 
         fetchPosts();

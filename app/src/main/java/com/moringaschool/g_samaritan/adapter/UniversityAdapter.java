@@ -52,7 +52,6 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.Po
 //        @BindView(R.id.lostImageView) ImageView lostImageView;
         @BindView(R.id.textViewBody) TextView textViewBody;
         @BindView(R.id.textViewTitle)TextView textViewTitle;
-//        @BindView(R.id.setAlphaTwoCode) TextView msetAlphaTwoCode;
 
 //        private Context mContext;
 

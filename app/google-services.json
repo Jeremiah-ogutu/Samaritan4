@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "164982489555",
+    "project_id": "samaritan2-926bb",
+    "storage_bucket": "samaritan2-926bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164982489555:android:56dd0e76ccdaa859ab2f26",
+        "android_client_info": {
+          "package_name": "com.moringaschool.g_samaritan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164982489555-fthtrdr6qd3mgvp3td2b8sv90kvsnde7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.g_samaritan",
+            "certificate_hash": "ec8c6e703ff356a03c8ca3e6bcad4b3125abe0e3"
+          }
+        },
+        {
+          "client_id": "164982489555-1e52gf1kn13si8ke63pcribsk18mqpm2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbXr5sv6T2w19ts--vjT_jayMj5ZmD7uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164982489555-1e52gf1kn13si8ke63pcribsk18mqpm2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

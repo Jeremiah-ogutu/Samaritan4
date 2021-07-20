@@ -98,6 +98,12 @@ mSearchedCountryReferenceListener = mSearchedCountryReference.addValueEventListe
 
     }
 
+  @Override
+    protected void  onDestroy(){
+        super.onDestroy();
+        mSearchedCountryReference.removeEventListener(mSearchedCountryReferenceListener);
+  }
+
 
 }
 

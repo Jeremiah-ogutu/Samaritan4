@@ -31,39 +31,39 @@
 
 
 
-    <EditText
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="220dp"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:ems="10"
-        android:id="@+id/EditText"
-        android:background="@color/purple_500"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:hint="enter your county" />
+<!--    <EditText-->
+<!--        android:layout_width="234dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="97dp"-->
+<!--        android:layout_marginBottom="220dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="20sp"-->
+<!--        android:ems="10"-->
+<!--        android:id="@+id/EditText"-->
+<!--        android:background="@color/purple_500"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:hint="enter your county" />-->
 
-    <EditText
-        android:id="@+id/findViewById"
-        android:layout_width="234dp"
-        android:textSize="20sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="97dp"
-        android:background="@color/purple_500"
-        android:layout_marginBottom="276dp"
-        android:padding="5dp"
-        android:textStyle="bold"
-        android:ems="10"
-        android:layout_above="@+id/logInbutton"
-        android:textColor="@color/white"
-        android:hint="enter your name" />
+<!--    <EditText-->
+<!--        android:id="@+id/findViewById"-->
+<!--        android:layout_width="234dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="97dp"-->
+<!--        android:background="@color/purple_500"-->
+<!--        android:layout_marginBottom="276dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:ems="10"-->
+<!--        android:layout_above="@+id/logInbutton"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:hint="enter your name" />-->
 
     <Button
         android:id="@+id/logInbutton"

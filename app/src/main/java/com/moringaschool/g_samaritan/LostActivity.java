@@ -5,15 +5,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import butterknife.ButterKnife;
 import retrofit2.Call;
 
 import com.moringaschool.g_samaritan.models.Universities;
@@ -29,12 +37,26 @@ import retrofit2.Response;
 
 
 public class LostActivity extends  AppCompatActivity {
+
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+    private String mRecentAddress;
+
+
+    private static final String TAG = LostActivity.class.getSimpleName();
     RecyclerView recyclerView;
     ProgressBar progressBar;
     LinearLayoutManager layoutManager;
     UniversityAdapter adapter;
 
     List<Universities> universitiesList = new ArrayList<>();
+
+    private  void SharedPreferences(String country){
+        mEditor.putString(Constants.PREFERENCES_COUNTRY_KEY, country).apply();
+    }
+
+
+
 
 
 
@@ -56,6 +78,12 @@ public class LostActivity extends  AppCompatActivity {
 
         fetchPosts();
 
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mRecentAddress = mSharedPreferences.getString(Constants.PREFERENCES_COUNTRY_KEY, null);
+        if(mRecentAddress != null){
+            fetchPosts(mRecentAddress);
+        }
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,12 +102,57 @@ public class LostActivity extends  AppCompatActivity {
         String county =intent.getStringExtra("county");
 //
 
-        //IP2
+        //IP3
 
 
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search,menu);
+        ButterKnife.bind(this);
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mSharedPreferences.edit();
+
+        MenuItem menuItem = menu.findItem(R.id.search_badge);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+
+            @Override
+            public boolean onQueryTextSubmit(String country) {
+                addToSharedPreferences(country);
+                fetchPosts(country);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void fetchPosts(String country) {
+        fetchPosts();
+    }
+
+    private void addToSharedPreferences(String country) {
+        mEditor.putString(Constants.PREFERENCES_COUNTRY_KEY,country).apply();
+    }
+
+    ;
+
+//IP2
     private void fetchPosts(){
         progressBar.setVisibility(View.VISIBLE);
         UniversityClient.getRetrofitClient().getUniversities().enqueue(new Callback<List<Universities>>() {

@@ -35,62 +35,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    @BindView(R.id.findViewById) EditText name ;
-    @BindView(R.id.EditText) EditText county;
+//    @BindView(R.id.findViewById) EditText name ;
+    @BindView(R.id.logInbutton) Button mlogInbutton;
     @BindView(R.id.savedUniversitiesButton) Button mSavedUniversitiesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        mSearchedCountryReference = FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child(Constants.FIREBASE_CHILD_SEARCHED_LOCATION);
-
-mSearchedCountryReferenceListener = mSearchedCountryReference.addValueEventListener(new  ValueEventListener() {
-    @Override
-    public void onDataChange(@NonNull  DataSnapshot datasnapshot) {
-        for(DataSnapshot countrySnapshot :datasnapshot.getChildren()){
-            String country = countrySnapshot.getValue().toString();
-            Log.d("Country update","country" + country);
-        }
-
-    }
-
-    @Override
-    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-    }
-});
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        mSavedUniversitiesButton.setOnClickListener(this);
-
-//
     }
+
+//        mSearchedCountryReference = FirebaseDatabase
+//                .getInstance()
+//                .getReference()
+//                .child(Constants.FIREBASE_CHILD_SEARCHED_LOCATION);
+
+//mSearchedCountryReferenceListener = mSearchedCountryReference.addValueEventListener(new  ValueEventListener() {
+//    @Override
+//    public void onDataChange(@NonNull  DataSnapshot datasnapshot) {
+//        for(DataSnapshot countrySnapshot :datasnapshot.getChildren()){
+//            String country = countrySnapshot.getValue().toString();
+//            Log.d("Country update","country" + country);
+//        }
 //
+//    }
+//
+//    @Override
+//    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//    }
+//});
+//
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+//        ButterKnife.bind(this);
+//
+//        mSavedUniversitiesButton.setOnClickListener(this);
+//
+////
+//    }
+////
     public void switchActivity(View view){
         Intent intent = new Intent(this,LostActivity.class);
-        intent.putExtra("name",name.getText() .toString()) ;
-        intent.putExtra("county",county.getText() .toString());
+////        intent.putExtra("name",name.getText() .toString()) ;
+////        intent.putExtra("county",county.getText() .toString());
         startActivity(intent);
+//
+////        String Country = county.getText().toString();
+//
+////        saveCountryToFirebase(Country);
+//
+//    }
 
-        String Country = county.getText().toString();
-
-        saveCountryToFirebase(Country);
-
-    }
-
-    private void saveCountryToFirebase(String country) {
-        mSearchedCountryReference.push().setValue(country);
+//    private void saveCountryToFirebase(String country) {
+//        mSearchedCountryReference.push().setValue(country);
     }
 
 
     @Override
     public void onClick(View v) {
+
+        if (v==mlogInbutton){
+            Intent intent = new Intent(MainActivity.this,LostActivity.class);
+            startActivity(intent);
+
+        }
+
         if(v==mSavedUniversitiesButton) {
             Intent intent = new Intent(MainActivity.this,SavedUniversitiesListActivity.class);
             startActivity(intent);
@@ -98,11 +109,11 @@ mSearchedCountryReferenceListener = mSearchedCountryReference.addValueEventListe
 
     }
 
-  @Override
-    protected void  onDestroy(){
-        super.onDestroy();
-        mSearchedCountryReference.removeEventListener(mSearchedCountryReferenceListener);
-  }
+//  @Override
+//    protected void  onDestroy(){
+//        super.onDestroy();
+//        mSearchedCountryReference.removeEventListener(mSearchedCountryReferenceListener);
+//  }
 
 
 }

@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gsamaritan"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CreateAccountActivity"></activity>
+        <activity android:name=".LOginActivity"></activity>
+        <activity android:name=".CreateAccountActivity" />
         <activity android:name=".SavedUniversitiesListActivity" />
         <activity
             android:name=".FoundActivity"

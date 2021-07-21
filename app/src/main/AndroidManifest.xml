@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gsamaritan"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LOginActivity"></activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".SavedUniversitiesListActivity" />
         <activity
@@ -22,11 +29,7 @@
             android:name=".LostActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

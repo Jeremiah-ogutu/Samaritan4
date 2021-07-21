@@ -20,12 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/black"
+            android:background="@android:color/white"
             android:hint="Name"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/purple_200"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -38,7 +38,7 @@
             android:inputType="textEmailAddress"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp" />
 
@@ -47,12 +47,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:background="@android:color/black"
+            android:background="@android:color/holo_purple"
             android:hint="Password"
             android:inputType="textPassword"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp" />
 
@@ -66,8 +66,8 @@
             android:inputType="textPassword"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@color/black"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/white"
             android:textSize="20sp" />
 
 
@@ -76,10 +76,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@color/purple_200"
+            android:background="@color/white"
             android:padding="10dp"
             android:text="Sign up"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/loginTextView"
@@ -88,7 +88,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="Already have an account? Log in here!"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_200"
             android:textSize="18sp"
             android:textStyle="bold" />
 

@@ -61,7 +61,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="Don't have an account? Sign up here!"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_200"
             android:textSize="18sp"
             android:textStyle="bold" />
 

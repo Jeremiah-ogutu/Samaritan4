@@ -12,13 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gsamaritan"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SavedUniversitiesListActivity"></activity>
+        <activity android:name=".CreateAccountActivity"></activity>
+        <activity android:name=".SavedUniversitiesListActivity" />
         <activity
             android:name=".FoundActivity"
-            android:parentActivityName=".LostActivity"></activity>
+            android:parentActivityName=".LostActivity" />
         <activity
             android:name=".LostActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

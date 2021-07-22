@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Log in"
+        android:text="view Universities"
         android:onClick="switchActivity"
         android:background="@color/green"
         android:textColor="@color/white" />

@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,9 +34,11 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private ValueEventListener mSearchedCountryReferenceListener;
+//    private ValueEventListener mSearchedCountryReferenceListener;
 
-    private DatabaseReference mSearchedCountryReference;
+//    private DatabaseReference mSearchedCountryReference;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
 
 
@@ -48,52 +51,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
+                } else {
+
+                }
+
+            }
+        };
+
     }
 
-//        mSearchedCountryReference = FirebaseDatabase
-//                .getInstance()
-//                .getReference()
-//                .child(Constants.FIREBASE_CHILD_SEARCHED_LOCATION);
-
-//mSearchedCountryReferenceListener = mSearchedCountryReference.addValueEventListener(new  ValueEventListener() {
-//    @Override
-//    public void onDataChange(@NonNull  DataSnapshot datasnapshot) {
-//        for(DataSnapshot countrySnapshot :datasnapshot.getChildren()){
-//            String country = countrySnapshot.getValue().toString();
-//            Log.d("Country update","country" + country);
-//        }
-//
-//    }
-//
-//    @Override
-//    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//    }
-//});
-//
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//        ButterKnife.bind(this);
-//
-//        mSavedUniversitiesButton.setOnClickListener(this);
-//
-////
-//    }
-////
-    public void switchActivity(View view){
-        Intent intent = new Intent(this,LostActivity.class);
-////        intent.putExtra("name",name.getText() .toString()) ;
-////        intent.putExtra("county",county.getText() .toString());
-        startActivity(intent);
-//
-////        String Country = county.getText().toString();
-//
-////        saveCountryToFirebase(Country);
+//    public void switchActivity(View view){
+//        Intent intent = new Intent(this,LostActivity.class);
+//        startActivity(intent);
 //
 //    }
 
-//    private void saveCountryToFirebase(String country) {
-//        mSearchedCountryReference.push().setValue(country);
+    @Override
+    public void onClick(View v) {
+
+        if (v==mlogInbutton){
+            Intent intent = new Intent(MainActivity.this,LostActivity.class);
+            startActivity(intent);
+
+        }
+
+        if(v==mSavedUniversitiesButton) {
+            Intent intent = new Intent(MainActivity.this,SavedUniversitiesListActivity.class);
+            startActivity(intent);
+        }
+
     }
 
 
@@ -122,22 +117,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         finish();
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
 
     @Override
-    public void onClick(View v) {
-
-        if (v==mlogInbutton){
-            Intent intent = new Intent(MainActivity.this,LostActivity.class);
-            startActivity(intent);
-
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
-
-        if(v==mSavedUniversitiesButton) {
-            Intent intent = new Intent(MainActivity.this,SavedUniversitiesListActivity.class);
-            startActivity(intent);
-        }
-
     }
+
+
+
 
 //  @Override
 //    protected void  onDestroy(){

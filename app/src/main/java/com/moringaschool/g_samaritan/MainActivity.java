@@ -69,11 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-//    public void switchActivity(View view){
-//        Intent intent = new Intent(this,LostActivity.class);
-//        startActivity(intent);
-//
-//    }
+    public void switchActivity(View view){
+        Intent intent = new Intent(this,LostActivity.class);
+        startActivity(intent);
+
+    }
 
     @Override
     public void onClick(View v) {

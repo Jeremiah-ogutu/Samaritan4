@@ -22,13 +22,7 @@
             android:visibility="gone"/>
 
 
-        <!--    <TextView-->
-    <!--        android:id="@+id/locationTextView"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:text="Restaurants near "-->
-    <!--        android:visibility="gone" />-->
+
 
         <TextView
             android:id="@+id/ErrorTextView"

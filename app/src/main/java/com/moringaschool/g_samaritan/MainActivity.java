@@ -34,15 +34,13 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-//    private ValueEventListener mSearchedCountryReferenceListener;
 
-//    private DatabaseReference mSearchedCountryReference;
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
 
 
-//    @BindView(R.id.findViewById) EditText name ;
     @BindView(R.id.logInbutton) Button mlogInbutton;
     @BindView(R.id.savedUniversitiesButton) Button mSavedUniversitiesButton;
 
@@ -134,11 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-//  @Override
-//    protected void  onDestroy(){
-//        super.onDestroy();
-//        mSearchedCountryReference.removeEventListener(mSearchedCountryReferenceListener);
-//  }
+
 
 
 }

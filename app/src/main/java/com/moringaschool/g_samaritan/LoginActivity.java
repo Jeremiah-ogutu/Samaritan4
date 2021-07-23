@@ -86,13 +86,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-//    @Override
-//    public void onClick(View view){
-//        Intent intent = new Intent(LoginActivity.this)
-//        if (view == mPasswordLoginButton){
-//            loginWithPassword();
-//        }
-//    }
 
     private void loginWithPassword() {
         String email = mEmailEditText.getText().toString().trim();

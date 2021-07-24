@@ -26,6 +26,7 @@ public class Universities {
     @SerializedName("country")
     @Expose
     private String country;
+    String index;//ip4
 
     /**
      * No args constructor for use in serialization
@@ -51,6 +52,9 @@ public class Universities {
         this.alphaTwoCode = alphaTwoCode;
         this.stateProvince = stateProvince;
         this.country = country;
+
+        this.index = "not_specified";//ip4
+
     }
 
     public List<String> getDomains() {
@@ -101,4 +105,12 @@ public class Universities {
         this.country = country;
     }
 
+    //4
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
+    }
 }

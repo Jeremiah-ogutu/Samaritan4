@@ -38,7 +38,7 @@ public class FirebaseUniversityListAdapter extends FirebaseRecyclerAdapter<Unive
     public  FirebaseUniversityListAdapter(FirebaseRecyclerOptions<Universities> options, Query ref, SavedUniversitiesListActivity onStartDragListener, Context context){
         super(options);
         mRef = ref.getRef();
-        mOnStartDragListener = onStartDragListener;
+//        mOnStartDragListener = onStartDragListener;
         mContext = context;
 
 
